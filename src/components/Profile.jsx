@@ -6,8 +6,27 @@ function Profile() {
 
     if (!user) {
         return (
-            <div className="flex items-center justify-center min-h-screen text-black bg-gray-100">
-                <div className="bg-white p-6 rounded-lg shadow-md text-center text-black text-xl font-semibold" >
+            <div
+                style={{
+                    height: '100vh',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'Arial, sans-serif'
+                }}
+            >
+                <div
+                    style={{
+                        backgroundColor: '#fff',
+                        padding: '20px 40px',
+                        borderRadius: '12px',
+                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                        textAlign: 'center',
+                        color: '#333',
+                        fontSize: '20px',
+                        fontWeight: 'bold'
+                    }}
+                >
                     Please login to view your profile.
                 </div>
             </div>
@@ -15,11 +34,34 @@ function Profile() {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md text-center">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">User Profile</h2>
-                <p className="text-gray-700 text-lg"><span className="font-semibold">Email:</span> {user.email}</p>
-                <p className="text-gray-700 text-lg mt-2"><span className="font-semibold">Password:</span> {user.password}</p>
+        <div
+            style={{
+                height: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                backgroundColor: 'transparent',
+                fontFamily: 'Arial, sans-serif'
+            }}
+        >
+            <div
+                style={{
+                    backgroundColor: '#ffffff',
+                    padding: '30px 40px',
+                    borderRadius: '14px',
+                    boxShadow: '0 6px 18px rgba(0, 0, 0, 0.15)',
+                    textAlign: 'center',
+                    color: '#333',
+                    width: '90%',
+                    maxWidth: '400px'
+                }}
+            >
+                <h2 style={{ fontSize: '26px', marginBottom: '20px' }}>User Profile</h2>
+                <p style={{ fontSize: '18px', margin: '10px 0' }}>
+                    <strong>Email:</strong> {user.email}
+                </p>
+                <p style={{ fontSize: '18px', margin: '10px 0' }}>
+                    <strong>Password:</strong> {user.password}
+                </p>
             </div>
         </div>
     );
